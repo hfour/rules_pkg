@@ -386,7 +386,7 @@ def pkg_deb(name, package, **kwargs):
     )
 
 def _format_zip_file_arg(f):
-    return "%s=%s" % (_quote(f.path), dest_path(f, strip_prefix = None))
+    return "%s=%s" % (_quote(f.path), dest_path(f, strip_prefix = False))
 
 def _pkg_zip_impl(ctx):
     args = ctx.actions.args()
